@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Clientes</title>
+    <title>Servicios</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -42,7 +42,7 @@
         <!-- Spinner End -->
 
 
-        <!-- Sidebar Start -->
+        <!-- Sidebar Start barra lateral -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
@@ -68,7 +68,7 @@
                 
             </nav>
         </div>
-        <!-- Sidebar End -->
+        <!-- Sidebar End  -->
 
 
         <!-- Content Start -->
@@ -164,202 +164,190 @@
                 </div>
             </nav>
             <!-- Navbar End -->
- <!-- clientes tabla -->
+           <!-- servicios tabla -->
 <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">Clientes Registrados</h6>
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addClientModal">Agregar Cliente</button>
+            <h6 class="mb-0">Servicios Registrados</h6>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addServiceModal">Agregar Servicio</button>
         </div>
         <div class="table-responsive">
             <table class="table text-start align-middle table-bordered table-hover mb-0">
                 <thead>
                     <tr class="text-dark">
-                        <th scope="col">Nombre completo</th>
-                        <th scope="col">Correo electrónico</th>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Más Información</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Juan Pérez</td>
-                        <td>juan.perez@example.com</td>
+                        <td>Latoneria</td>
+                        <td><img src="../Servicars.public/img/Latoneria.jpg" alt="Pintura de Autos" width="50"></td>
+                        <td>
+                            <strong>¿Qué es lo que hacemos?</strong> <br>
+                            <strong> Nos encargamos de reparar o reemplazar las partes dañadas de la carrocería de tu auto para que vuelva a lucir como nueva.</strong>
+                        </td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editServiceModal" onclick="setServiceData(this)">Editar</button>
+
+                                <button class="btn btn-sm btn-danger">Eliminar</button>
+                            </div>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pintura</td>
+                        <td><img src="../Servicars.public/img/profesionales.servi.png" alt="Restauración de Autos" width="50"></td>
+                        <td>
+                            <strong>Qué es lo que hacemos?</strong> <br>
+                            <strong>Aplicamos pintura a tu auto, ya que no es solo una capa de color, es una protección esencial para la carrocería y un elemento clave en su estética.</strong>
+                        </td>
+                        <td>
+                            <div class="d-flex">
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editServiceModal" onclick="setServiceData(this)">Editar</button>
+
                                 <button class="btn btn-sm btn-danger">Eliminar</button>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Laura Gómez</td>
-                        <td>laura.gomez@example.com</td>
+                        <td>Restauración de Pintura</td>
+                        <td><img src="../Servicars.public/img/Restauracion.png" alt="Restauración de Autos" width="50"></td>
+                        <td>
+                            <strong>¿Qué es lo que hacemos?</strong> <br>
+                            <strong>Podemos devolverle la pintura a tu vehículo, dándole brillo, color deseado y su protección original. Mejorando su apariencia y prolongando su vida útil.</strong> 
+                        </td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editServiceModal" onclick="setServiceData(this)">Editar</button>
+
                                 <button class="btn btn-sm btn-danger">Eliminar</button>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Carlos Ruiz</td>
-                        <td>carlos.ruiz@example.com</td>
+                        <td>Restauración metálica</td>
+                        <td><img src="../Servicars.public/img/Partes restauracion.png" alt="Restauración de Autos" width="50"></td>
+                        <td>
+                            <strong>¿Qué es lo que hacemos?</strong> <br>
+                            <strong>Buscamos devolver a las piezas de tu vehículo su estado original o lo más cercano posible, reparando daños, eliminando óxido o reemplazando piezas dañadas.</strong> 
+                        </td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editServiceModal" onclick="setServiceData(this)">Editar</button>
+
                                 <button class="btn btn-sm btn-danger">Eliminar</button>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Ana Torres</td>
-                        <td>ana.torres@example.com</td>
+                        <td>Limpieza profunda</td>
+                        <td><img src="../Servicars.public/img/lavado cojineria.png" alt="Restauración de Autos" width="50"></td>
+                        <td>
+                            <strong>¿Qué es lo que hacemos?</strong> <br>
+                            <strong>Realizamos una limpieza profunda de los asientos y tapizados interiores del vehículo, eliminando suciedad, manchas, olores y bacterias acumuladas.</strong> 
+                        </td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editServiceModal" onclick="setServiceData(this)">Editar</button>
+
                                 <button class="btn btn-sm btn-danger">Eliminar</button>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td>Pedro Martínez</td>
-                        <td>pedro.martinez@example.com</td>
+                        <td>Retoques de punto</td>
+                        <td><img src="../Servicars.public/img/retoques de punto.png" alt="Restauración de Autos" width="50"></td>
+                        <td>
+                            <strong>¿Qué es lo que hacemos?</strong> <br>
+                            <strong>Corregimos pequeños daños en la pintura como rayones, astillas o abolladuras, causados por el roce, piedras o desgaste natural.</strong> 
+                        </td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editServiceModal" onclick="setServiceData(this)">Editar</button>
+
                                 <button class="btn btn-sm btn-danger">Eliminar</button>
                             </div>
                         </td>
                     </tr>
                     
-                    <tr>
-                        <td>Pedro Martínez</td>
-                        <td>pedro.martinez@example.com</td>
-                        <td>
-                            <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
-                                <button class="btn btn-sm btn-danger">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pedro Martínez</td>
-                        <td>pedro.martinez@example.com</td>
-                        <td>
-                            <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
-                                <button class="btn btn-sm btn-danger">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pedro Martínez</td>
-                        <td>pedro.martinez@example.com</td>
-                        <td>
-                            <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
-                                <button class="btn btn-sm btn-danger">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pedro Martínez</td>
-                        <td>pedro.martinez@example.com</td>
-                        <td>
-                            <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
-                                <button class="btn btn-sm btn-danger">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pedro Martínez</td>
-                        <td>pedro.martinez@example.com</td>
-                        <td>
-                            <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
-                                <button class="btn btn-sm btn-danger">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pedro Martínez</td>
-                        <td>pedro.martinez@example.com</td>
-                        <td>
-                            <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#editClientModal" onclick="setClientData(this)">Editar</button>
-                                <button class="btn btn-sm btn-danger">Eliminar</button>
-                            </div>
-                        </td>
-                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- Modal para agregar cliente -->
-    <div class="modal fade" id="addClientModal" tabindex="-1" aria-labelledby="addClientLabel" aria-hidden="true">
+    <!-- Modal para agregar servicio -->
+    <div class="modal fade" id="addServiceModal" tabindex="-1" aria-labelledby="addServiceLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addClientLabel">Agregar Cliente</h5>
+                    <h5 class="modal-title" id="addServiceLabel">Agregar Servicio</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="addClientForm">
+                    <form id="addServiceForm" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label for="newClientName" class="form-label">Nombre completo</label>
-                            <input type="text" class="form-control" id="newClientName" required>
+                            <label for="serviceName" class="form-label">Servicio</label>
+                            <input type="text" class="form-control" id="serviceName" required>
                         </div>
                         <div class="mb-3">
-                            <label for="newClientEmail" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="newClientEmail" required>
+                            <label for="serviceImage" class="form-label">Imagen</label>
+                            <input type="file" class="form-control" id="serviceImage" accept="image/*" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Agregar Cliente</button>
+                        <div class="mb-3">
+                            <label for="serviceTitle" class="form-label">Título de Más Información</label>
+                            <input type="text" class="form-control" id="serviceTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="serviceDescription" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="serviceDescription" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Agregar Servicio</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal para editar cliente -->
-    <div class="modal fade" id="editClientModal" tabindex="-1" aria-labelledby="editClientLabel" aria-hidden="true">
+    <!-- Modal para editar servicio -->
+    <div class="modal fade" id="editServiceModal" tabindex="-1" aria-labelledby="editServiceLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="editClientLabel">Editar Cliente</h5>
+                    <h5 class="modal-title" id="editServiceLabel">Editar Servicio</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="editClientForm">
+                    <form id="editServiceForm" enctype="multipart/form-data">
                         <div class="mb-3">
-                            <label for="clientName" class="form-label">Nombre completo</label>
-                            <input type="text" class="form-control" id="clientName" required>
+                            <label for="editServiceName" class="form-label">Servicio</label>
+                            <input type="text" class="form-control" id="editServiceName" required>
                         </div>
                         <div class="mb-3">
-                            <label for="clientEmail" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="clientEmail" required>
+                            <label for="editServiceImage" class="form-label">Imagen</label>
+                            <input type="file" class="form-control" id="editServiceImage" accept="image/*">
                         </div>
-                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                        <div class="mb-3">
+                            <label for="editServiceTitle" class="form-label">Título de Más Información</label>
+                            <input type="text" class="form-control" id="editServiceTitle" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="editServiceDescription" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="editServiceDescription" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- clientes tabla fin -->
+<!-- servicios tabla fin -->
 
+ 
 
         <!-- Back to Top -->
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>

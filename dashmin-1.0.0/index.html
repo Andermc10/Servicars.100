@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>Citas agendadas</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -60,6 +60,7 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="index.html" class="nav-item nav-link active me-2">Citas Agendadas</a>
+                    <a href="form copy.html" class="nav-item nav-link">Servicios</a>
                     <a href="form.html" class="nav-item nav-link me-2">Clientes</a>
                     <a href="table.html" class="nav-item nav-link me-2">Trabajadores</a>
                     <a href="chart.html" class="nav-item nav-link">Reportes</a>
@@ -81,7 +82,7 @@
                     <i class="fa fa-bars"></i>
                 </a>
                 <form class="d-none d-md-flex ms-4">
-                    <input class="form-control border-0" type="search" placeholder="Search">
+                    <input class="form-control border-0" type="search" placeholder="Buscar">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
@@ -167,12 +168,34 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+<!-- citas agendadas inicio -->
 <!-- citas agendadas inicio -->
 <div class="container-fluid pt-4 px-4">
     <div class="bg-light text-center rounded p-4">
         <div class="d-flex align-items-center justify-content-between mb-4">
             <h6 class="mb-0">Citas Agendadas</h6>
-            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editAppointmentModal">Agendar Cita</button>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addAppointmentModal">Agendar Cita</button>
         </div>
         <div class="table-responsive">
             <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -200,8 +223,8 @@
                         <td>
                             <div class="d-flex">
                                 <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData('Juan Pérez', '(123) 456-7890', 
-                                 'juan.perez@example.com', 'Latonería', '18 Sep 2024', 'Toyota Corolla')">Editar</button>
+                                 data-bs-target="#editAppointmentModal" 
+                                 onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -218,8 +241,7 @@
                         <td>
                             <div class="d-flex">
                                 <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                data-bs-target="#editAppointmentModal" onclick="setAppointmentData('Laura Gómez',
-                                 '(234) 567-8901', 'laura.gomez@example.com', 'Pintura', '19 Sep 2024', 'Honda Civic')">Editar</button>
+                                data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -236,8 +258,7 @@
                         <td>
                             <div class="d-flex">
                                 <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" 
-                                data-bs-target="#editAppointmentModal" onclick="setAppointmentData('Carlos Ruiz', 
-                                '(345) 678-9012', 'carlos.ruiz@example.com', 'Limpieza profunda', '20 Sep 2024', 'Chevrolet Spark')">Editar</button>
+                                data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -254,9 +275,7 @@
                         <td>
                             <div class="d-flex">
                                 <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                 data-bs-target="#editAppointmentModal" 
-                                onclick="setAppointmentData('Ana Torres', '(456) 789-0123', 'ana.torres@example.com', 'Restauración de partes metálicas', 
-                                '21 Sep 2024', 'Nissan Altima')">Editar</button>
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -273,9 +292,7 @@
                         <td>
                             <div class="d-flex">
                                 <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
-                                 data-bs-target="#editAppointmentModal" 
-                                onclick="setAppointmentData('Pedro Martínez', '(567) 890-1234', 'pedro.martinez@example.com', 'Restauración de Pintura', 
-                                '22 Sep 2024', 'Hyundai Elantra')">Editar</button>
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -291,9 +308,8 @@
                         <td>Hyundai Elantra</td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editAppointmentModal"
-                                 onclick="setAppointmentData('Pedro Martínez', '(567) 890-1234', 'pedro.martinez@example.com', 
-                                 'Restauración de Pintura', '22 Sep 2024', 'Hyundai Elantra')">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -309,9 +325,8 @@
                         <td>Hyundai Elantra</td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editAppointmentModal" 
-                                onclick="setAppointmentData('Pedro Martínez', '(567) 890-1234', 'pedro.martinez@example.com', 
-                                'Restauración de Pintura', '22 Sep 2024', 'Hyundai Elantra')">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -327,9 +342,8 @@
                         <td>Hyundai Elantra</td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editAppointmentModal" 
-                                onclick="setAppointmentData('Pedro Martínez', '(567) 890-1234', 'pedro.martinez@example.com',
-                                 'Restauración de Pintura', '22 Sep 2024', 'Hyundai Elantra')">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -345,9 +359,8 @@
                         <td>Hyundai Elantra</td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editAppointmentModal" 
-                                onclick="setAppointmentData('Pedro Martínez', '(567) 890-1234', 'pedro.martinez@example.com',
-                                 'Restauración de Pintura', '22 Sep 2024', 'Hyundai Elantra')">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -363,9 +376,8 @@
                         <td>Hyundai Elantra</td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editAppointmentModal" 
-                                onclick="setAppointmentData('Pedro Martínez', '(567) 890-1234', 'pedro.martinez@example.com', 
-                                'Restauración de Pintura', '22 Sep 2024', 'Hyundai Elantra')">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
@@ -381,20 +393,53 @@
                         <td>Hyundai Elantra</td>
                         <td>
                             <div class="d-flex">
-                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal" data-bs-target="#editAppointmentModal" 
-                                onclick="setAppointmentData('Pedro Martínez', '(567) 890-1234', 'pedro.martinez@example.com', 
-                                'Restauración de Pintura', '22 Sep 2024', 'Hyundai Elantra')">Editar</button>
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
                                 <button class="btn btn-sm btn-success me-2">Aceptar</button>
                                 <button class="btn btn-sm btn-danger">Rechazar</button>
                             </div>
                         </td>
                     </tr>
-
+                    <tr>
+                        <td><input class="form-check-input" type="checkbox"></td>
+                        <td>Pedro Martínez</td>
+                        <td>(567) 890-1234</td>
+                        <td>pedro.martinez@example.com</td>
+                        <td>Restauración de Pintura</td>
+                        <td>22 Sep 2024</td>
+                        <td>Hyundai Elantra</td>
+                        <td>
+                            <div class="d-flex">
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
+                                <button class="btn btn-sm btn-success me-2">Aceptar</button>
+                                <button class="btn btn-sm btn-danger">Rechazar</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input class="form-check-input" type="checkbox"></td>
+                        <td>Pedro Martínez</td>
+                        <td>(567) 890-1234</td>
+                        <td>pedro.martinez@example.com</td>
+                        <td>Restauración de Pintura</td>
+                        <td>22 Sep 2024</td>
+                        <td>Hyundai Elantra</td>
+                        <td>
+                            <div class="d-flex">
+                                <button class="btn btn-sm btn-warning me-2" data-bs-toggle="modal"
+                                 data-bs-target="#editAppointmentModal" onclick="setAppointmentData(this)">Editar</button>
+                                <button class="btn btn-sm btn-success me-2">Aceptar</button>
+                                <button class="btn btn-sm btn-danger">Rechazar</button>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
 <!-- Modal para agregar cita -->
 <div class="modal fade" id="addAppointmentModal" tabindex="-1" aria-labelledby="addAppointmentLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -436,7 +481,6 @@
     </div>
 </div>
 
-
 <!-- Modal para editar cita -->
 <div class="modal fade" id="editAppointmentModal" tabindex="-1" aria-labelledby="editAppointmentLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -477,6 +521,10 @@
         </div>
     </div>
 </div>
+
+
+<!-- Citas agendadas fin -->
+
 
 <!-- Citas agendadas fin -->
 

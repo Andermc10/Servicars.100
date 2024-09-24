@@ -117,75 +117,48 @@
     
     
 
-    // CRUD de Citas Agendadas
-    // Función para ver detalles de la cita
-    window.verCita = function(id) {
-        alert(`Viendo detalles de la cita con ID: ${id}`);
-    };
 
-    // Función para editar la cita
-    window.editarCita = function(id) {
-        alert(`Editando la cita con ID: ${id}`);
-        // Aquí puedes añadir la lógica para mostrar un formulario y editar la cita
-    };
-
-    // Función para eliminar la cita
-    window.eliminarCita = function(id) {
-        if (confirm(`¿Estás seguro de que deseas eliminar la cita con ID: ${id}?`)) {
-            alert(`Cita con ID: ${id} eliminada`);
-            // Aquí puedes agregar la lógica para eliminar la cita de la tabla y del almacenamiento
-        }
-    };
-
-    // Función para agendar una nueva cita
-    window.agendarCita = function() {
-        alert('Agendar nueva cita');
-        // Aquí puedes agregar la lógica para mostrar un formulario para agendar una nueva cita
-    };
-
-    // Inicialización de citas (puedes adaptarlo para usar localStorage o backend)
-    function inicializarCitas() {
-        // Aquí podrías cargar las citas desde un almacenamiento local o base de datos
-    }
-
-    // Se ejecuta cuando el documento está listo
-    $(document).ready(function() {
-        inicializarCitas(); // Llama a la función para inicializar las citas
-    });
-
-    // Función para establecer datos del cliente en el formulario
-    function setClientData(name, email) {
-        document.getElementById('clientName').value = name; // Asigna el nombre al campo
-        document.getElementById('clientEmail').value = email; // Asigna el correo al campo
-    }
     
-    // Maneja el evento de envío del formulario de edición de cliente
-    document.getElementById('editClientForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Previene el comportamiento predeterminado
-        // Aquí puedes agregar lógica para guardar los cambios
-        alert('Cliente editado: ' + document.getElementById('clientName').value);
-    });
 
-    // Función para establecer datos de la cita en el formulario
-    function setAppointmentData(name, phone, email, service, date, vehicle) {
-        document.getElementById('appointmentName').value = name;
-        document.getElementById('appointmentPhone').value = phone;
-        document.getElementById('appointmentEmail').value = email;
-        document.getElementById('appointmentService').value = service;
-        document.getElementById('appointmentDate').value = date;
-        document.getElementById('appointmentVehicle').value = vehicle;
-    }
     
-    // Maneja el evento de envío del formulario de edición de cita
-    document.getElementById('editAppointmentForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Previene el comportamiento predeterminado
-        // Aquí puedes agregar lógica para guardar los cambios
-        alert('Cita editada: ' + document.getElementById('appointmentName').value);
-    });
 
+    
+   
     
 
   
 
 })(jQuery);
+
+// Editar citas agendadas 
+
+function setAppointmentData(button) {
+    const row = button.closest('tr');
+    document.getElementById('appointmentName').value = row.cells[1].innerText;
+    document.getElementById('appointmentPhone').value = row.cells[2].innerText;
+    document.getElementById('appointmentEmail').value = row.cells[3].innerText;
+    document.getElementById('appointmentService').value = row.cells[4].innerText;
+    document.getElementById('appointmentDate').value = row.cells[5].innerText; // Asegúrate de que el formato de fecha sea correcto
+    document.getElementById('appointmentVehicle').value = row.cells[6].innerText;
+}
+
+
+// Agregar cliente 
+function setClientData(button) {
+    const row = button.closest('tr'); // Encuentra la fila de la tabla
+    document.getElementById('clientName').value = row.cells[0].innerText; // Nombre completo
+    document.getElementById('clientEmail').value = row.cells[1].innerText; // Correo electrónico
+}
+
+// Agregar servicios 
+
+
+    function setServiceData(button) {
+        const row = button.closest('tr'); // Encuentra la fila de la tabla
+
+        // Asigna los valores de las celdas correspondientes a los campos del modal
+        document.getElementById('editServiceName').value = row.cells[0].innerText; // Servicio
+        document.getElementById('editServiceTitle').value = row.cells[2].querySelector('strong').innerText; // Título de Más Información
+        document.getElementById('editServiceDescription').value = row.cells[2].innerText.split('\n')[1]; // Descripción
+    }
 
